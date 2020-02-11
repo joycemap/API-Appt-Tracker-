@@ -22,7 +22,7 @@ class Home extends React.Component {
             <h1>Appointment Tracker Log In</h1>
             <form action="/users/logincheck" method="POST">
               <p>
-                <label for="name">Name</label>{" "}<input name="name" required />
+                <label for="name">Name</label> <input name="name" required />
               </p>
               <p>
                 <label for="name">Password</label>{" "}
@@ -44,6 +44,13 @@ class Home extends React.Component {
                 </a>
               </div>
             </form>
+            <div className="container">
+              <div className="row text-center">
+                <div className="col-12">
+                  <div id="qrcode" className="qrcode"></div>
+                </div>
+              </div>
+            </div>
           </div>
           <script
             src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -60,6 +67,9 @@ class Home extends React.Component {
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossOrigin="anonymous"
           ></script>
+          <script src="/jquery.min.js"> </script>
+          <script src="/qrcode.min.js"></script>
+          <script src="/qr.js"></script>
         </body>
       </html>
     );

@@ -22,16 +22,28 @@ class Layout extends React.Component {
             crossOrigin="anonymous"
           />
           <link rel="stylesheet" href="/custom.css" />
+          <script
+            src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+            type="text/javascript"
+            charset="utf-8"
+          ></script>
+          <script
+            src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+            type="text/javascript"
+            charset="utf-8"
+          ></script>
         </head>
         <body>
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/">Appointment Tracker</a>
+            <a class="navbar-brand" href="/">
+              Appointment Tracker
+            </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                   <a class="nav-link" href="/">
-                           Home <span class="sr-only">(current)</span>
+                    Home <span class="sr-only">(current)</span>
                   </a>
                 </li>
 
@@ -44,7 +56,12 @@ class Layout extends React.Component {
             </div>
           </nav>
           {this.props.children}
-          
+          <div
+            style={{ width: "640px", height: "480px" }}
+            id="mapContainer"
+          ></div>
+          <script src="/maps.js" type="text/javascript"></script>
+
         </body>
       </html>
     );

@@ -22,7 +22,7 @@ class OneAppt extends React.Component {
               <br />
               <strong>Time:</strong> {this.props.apptData.time.slice(0, -3)}
               <br />
-              <strong>Location:</strong> {this.props.apptData.location} <br />
+              <strong>Location:</strong> <a target="_blank" href={`https://www.google.com/maps/search/?api=1&query=${this.props.apptData.location}`}> {this.props.apptData.location} </a><br />
               <strong>Doctor:</strong> {this.props.apptData.doctor} <br />
               <strong>Notes:</strong> {this.props.apptData.notes} <br />
             </p>
@@ -80,6 +80,7 @@ class Userpage extends React.Component {
           </a>
         </p>
         <div class="item-container">{itemElements}</div>
+        
       </Layout>
     );
   }

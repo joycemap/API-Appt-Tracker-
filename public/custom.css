@@ -63,3 +63,10 @@ input[type="time"] {
 	text-align: center;
 
 }
+
+.qrcode img {
+padding: 10px;
+background: white;
+display: initial !important;
+}
+
